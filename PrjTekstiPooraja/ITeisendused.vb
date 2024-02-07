@@ -5,6 +5,6 @@
     Property strTekst As String
 
     Function pooraTekst() As String
-    Sub tesiendaTekst(ByRef strSisendTekst As String)
+    Sub teisendaTekst(ByRef strSisendTekst As String)
 
 End Interface

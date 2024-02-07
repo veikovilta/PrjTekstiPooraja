@@ -20,4 +20,12 @@
         txtValjundTekst1.Text = pooraja.pooraTekst()
 
     End Sub
+
+    Private Sub btnPoora2_Click(sender As Object, e As EventArgs) Handles btnPoora2.Click
+        Dim pooraja As PrjTekstiPooraja.ITeisendused
+        pooraja = New PrjTekstiPooraja.CTekstiPooraja
+
+        pooraja.teisendatekst(txtSisendTekst.Text)
+        txtValjundTekst2.Text = pooraja.strTekst
+    End Sub
 End Class

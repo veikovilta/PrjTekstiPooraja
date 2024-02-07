@@ -34,9 +34,9 @@
         End Set
     End Property
 
-    Private Sub tesiendaTekst(ByRef strSisendTekst As String) _
-        Implements ITeisendused.tesiendaTekst
-        strPooratavTekst = StrReverse(strPooratavTekst)
+    Private Sub teisendaTekst(ByRef strSisendTekst As String) _
+        Implements ITeisendused.teisendaTekst
+        strPooratavTekst = StrReverse(strSisendTekst)
     End Sub
 
     Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
