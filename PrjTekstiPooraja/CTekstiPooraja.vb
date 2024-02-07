@@ -5,7 +5,7 @@
     'atribuudid
     Private intAlgusSymbol As Integer
     Private intLoppSymbol As Integer
-    Private strPooratavTekst As Integer
+    Private strPooratavTekst As String
 
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
@@ -25,11 +25,11 @@
         End Set
     End Property
 
-    Private Property strTekst As Integer Implements ITeisendused.strTekst
+    Private Property strTekst As String Implements ITeisendused.strTekst
         Get
             Return strPooratavTekst
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             strPooratavTekst = value
         End Set
     End Property
