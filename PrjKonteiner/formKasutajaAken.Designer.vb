@@ -36,6 +36,7 @@ Partial Class formKasutajaAken
         Me.timerUuenda = New System.Windows.Forms.Timer(Me.components)
         Me.lblSisendTekst = New System.Windows.Forms.Label()
         Me.lblVowels = New System.Windows.Forms.Label()
+        Me.cpAlgo = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtSisendTekst
@@ -49,6 +50,7 @@ Partial Class formKasutajaAken
         '
         Me.txtValjundTekst1.Location = New System.Drawing.Point(297, 182)
         Me.txtValjundTekst1.Name = "txtValjundTekst1"
+        Me.txtValjundTekst1.ReadOnly = True
         Me.txtValjundTekst1.Size = New System.Drawing.Size(303, 26)
         Me.txtValjundTekst1.TabIndex = 1
         '
@@ -56,6 +58,7 @@ Partial Class formKasutajaAken
         '
         Me.txtValjundTekst2.Location = New System.Drawing.Point(297, 270)
         Me.txtValjundTekst2.Name = "txtValjundTekst2"
+        Me.txtValjundTekst2.ReadOnly = True
         Me.txtValjundTekst2.Size = New System.Drawing.Size(303, 26)
         Me.txtValjundTekst2.TabIndex = 2
         '
@@ -142,11 +145,22 @@ Partial Class formKasutajaAken
         Me.lblVowels.Size = New System.Drawing.Size(0, 20)
         Me.lblVowels.TabIndex = 11
         '
+        'cpAlgo
+        '
+        Me.cpAlgo.AutoSize = True
+        Me.cpAlgo.Location = New System.Drawing.Point(72, 380)
+        Me.cpAlgo.Name = "cpAlgo"
+        Me.cpAlgo.Size = New System.Drawing.Size(93, 24)
+        Me.cpAlgo.TabIndex = 12
+        Me.cpAlgo.Text = "Algoritm"
+        Me.cpAlgo.UseVisualStyleBackColor = True
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cpAlgo)
         Me.Controls.Add(Me.lblVowels)
         Me.Controls.Add(Me.lblSisendTekst)
         Me.Controls.Add(Me.btnStop)
@@ -179,4 +193,5 @@ Partial Class formKasutajaAken
     Friend WithEvents timerUuenda As Timer
     Friend WithEvents lblSisendTekst As Label
     Friend WithEvents lblVowels As Label
+    Friend WithEvents cpAlgo As CheckBox
 End Class

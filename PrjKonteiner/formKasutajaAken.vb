@@ -7,17 +7,37 @@ Public Class formKasutajaAken
         Dim pooraja As PrjTekstiPooraja.ITeisendused
         pooraja = New PrjTekstiPooraja.CTekstiPooraja
 
-        pooraja.strTekst = txtSisendTekst.Text
-        txtValjundTekst1.Text = pooraja.pooraTekst()
+        Dim algoPooraja As PrjTekstiPooraja.ITeisendused
+        algoPooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
 
+        Dim loppStr As String
+
+        If cpAlgo.Checked Then
+            loppStr = algoPooraja.algoPooraTekst(txtSisendTekst.Text)
+            txtValjundTekst1.Text = loppStr
+        Else
+            pooraja.strTekst = txtSisendTekst.Text
+            txtValjundTekst1.Text = pooraja.pooraTekst()
+        End If
     End Sub
 
     Private Sub btnPoora2_Click(sender As Object, e As EventArgs) Handles btnPoora2.Click
         Dim pooraja As PrjTekstiPooraja.ITeisendused
         pooraja = New PrjTekstiPooraja.CTekstiPooraja
 
-        pooraja.teisendaTekst(txtSisendTekst.Text)
-        txtValjundTekst2.Text = pooraja.strTekst
+        Dim algoPooraja As PrjTekstiPooraja.ITeisendused
+        algoPooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
+
+        Dim loppStr As String
+
+        If cpAlgo.Checked Then
+            loppStr = algoPooraja.algoPooraTekst(txtSisendTekst.Text)
+            txtValjundTekst2.Text = loppStr
+        Else
+            pooraja.teisendaTekst(txtSisendTekst.Text)
+            txtValjundTekst2.Text = pooraja.strTekst
+        End If
+
     End Sub
 
     Private Sub btnStop_Click(sender As Object, e As EventArgs) Handles btnStop.Click

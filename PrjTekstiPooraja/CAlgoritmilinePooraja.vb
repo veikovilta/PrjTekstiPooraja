@@ -39,11 +39,10 @@
 
     Public Function algoPooraTekst(algneStr As Object) As String Implements ITeisendused.algoPooraTekst
 
-        Dim loppStr As String = algneStr
-        Dim counter As Integer = 0
+        Dim loppStr As String = ""
 
         For i As Integer = algneStr.Length - 1 To 0 Step -1
-            loppStr &= Str(i)
+            loppStr &= algneStr(i)
         Next
 
         Return loppStr
