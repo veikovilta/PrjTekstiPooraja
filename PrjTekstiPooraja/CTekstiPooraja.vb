@@ -4,7 +4,7 @@
 
     'atribuudid
     Private intAlgusSymbol As Integer
-    Private intLoppSybol As Integer
+    Private intLoppSymbol As Integer
     Private strPooratavTekst As Integer
 
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
@@ -18,28 +18,29 @@
 
     Private Property intLopp As Integer Implements ITeisendused.intLopp
         Get
-            Throw New NotImplementedException()
+            Return intLoppSymbol
         End Get
-        Set(value As Integer)
-            Throw New NotImplementedException()
+        Set(ByVal value As Integer)
+            intLoppSymbol = value
         End Set
     End Property
 
     Private Property strTekst As Integer Implements ITeisendused.strTekst
         Get
-            Throw New NotImplementedException()
+            Return strPooratavTekst
         End Get
-        Set(value As Integer)
-            Throw New NotImplementedException()
+        Set(ByVal value As Integer)
+            strPooratavTekst = value
         End Set
     End Property
 
-    Private Sub tesiendaTekst(ByRef strSisendTekst As String) Implements ITeisendused.tesiendaTekst
-        Throw New NotImplementedException()
+    Private Sub tesiendaTekst(ByRef strSisendTekst As String) _
+        Implements ITeisendused.tesiendaTekst
+        strPooratavTekst = StrReverse(strPooratavTekst)
     End Sub
 
     Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
-        Throw New NotImplementedException()
+        Return StrReverse(strPooratavTekst)
     End Function
 
 End Class
