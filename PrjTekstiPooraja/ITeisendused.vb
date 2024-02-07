@@ -7,4 +7,6 @@
     Function pooraTekst() As String
     Sub teisendaTekst(ByRef strSisendTekst As String)
 
+    Function algoPooraTekst(ByVal algneStr) As String
+
 End Interface

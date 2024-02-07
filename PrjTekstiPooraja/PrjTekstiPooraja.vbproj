@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAlgoritmilinePooraja.vb" />
     <Compile Include="CTekstiPooraja.vb" />
     <Compile Include="ITeisendused.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
