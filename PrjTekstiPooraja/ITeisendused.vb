@@ -1,4 +1,4 @@
-﻿Public Interface Interface1
+﻿Public Interface ITeisendused
 
     Property intAlgus As Integer
     Property intLopp As Integer
