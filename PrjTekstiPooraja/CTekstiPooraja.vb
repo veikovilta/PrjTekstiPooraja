@@ -2,12 +2,17 @@
 
     Implements ITeisendused
 
+    'atribuudid
+    Private intAlgusSymbol As Integer
+    Private intLoppSybol As Integer
+    Private strPooratavTekst As Integer
+
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
-            Throw New NotImplementedException()
+            Return intAlgusSymbol
         End Get
-        Set(value As Integer)
-            Throw New NotImplementedException()
+        Set(ByVal value As Integer)
+            intAlgusSymbol = value
         End Set
     End Property
 
