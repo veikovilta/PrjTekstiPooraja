@@ -35,6 +35,7 @@ Partial Class formKasutajaAken
         Me.btnStop = New System.Windows.Forms.Button()
         Me.timerUuenda = New System.Windows.Forms.Timer(Me.components)
         Me.lblSisendTekst = New System.Windows.Forms.Label()
+        Me.lblVowels = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtSisendTekst
@@ -133,11 +134,20 @@ Partial Class formKasutajaAken
         Me.lblSisendTekst.Size = New System.Drawing.Size(0, 20)
         Me.lblSisendTekst.TabIndex = 10
         '
+        'lblVowels
+        '
+        Me.lblVowels.AutoSize = True
+        Me.lblVowels.Location = New System.Drawing.Point(687, 109)
+        Me.lblVowels.Name = "lblVowels"
+        Me.lblVowels.Size = New System.Drawing.Size(0, 20)
+        Me.lblVowels.TabIndex = 11
+        '
         'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblVowels)
         Me.Controls.Add(Me.lblSisendTekst)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
@@ -168,4 +178,5 @@ Partial Class formKasutajaAken
     Friend WithEvents btnStop As Button
     Friend WithEvents timerUuenda As Timer
     Friend WithEvents lblSisendTekst As Label
+    Friend WithEvents lblVowels As Label
 End Class

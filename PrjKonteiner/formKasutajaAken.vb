@@ -1,4 +1,6 @@
-﻿Public Class formKasutajaAken
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class formKasutajaAken
 
     Private Sub btnPoora1_Click(sender As Object, e As EventArgs) Handles btnPoora1.Click
 
@@ -41,5 +43,17 @@
 
     Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
         lblSisendTekst.Text = Len(txtSisendTekst.Text)
+
+        Dim vowels As Integer
+
+        For i As Integer = 0 To Len(txtSisendTekst.Text) - 1
+            Dim c As String = txtSisendTekst.Text(i)
+            If c Like "[aeiouüõöä]" Then
+                vowels = vowels + 1
+            End If
+        Next
+
+        lblVowels.Text = vowels
+
     End Sub
 End Class
