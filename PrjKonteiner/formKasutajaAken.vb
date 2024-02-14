@@ -56,8 +56,6 @@ Public Class formKasutajaAken
         pooraja.strTekst = txtSisendTekst.Text
         txtValjundTekst1.Text = pooraja.pooraTekst
 
-        btnStop.Enabled = False
-        btnStart.Enabled = True
 
     End Sub
 
