@@ -48,6 +48,7 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst1
         '
+        Me.txtValjundTekst1.Enabled = False
         Me.txtValjundTekst1.Location = New System.Drawing.Point(297, 182)
         Me.txtValjundTekst1.Name = "txtValjundTekst1"
         Me.txtValjundTekst1.ReadOnly = True
@@ -56,6 +57,7 @@ Partial Class formKasutajaAken
         '
         'txtValjundTekst2
         '
+        Me.txtValjundTekst2.Enabled = False
         Me.txtValjundTekst2.Location = New System.Drawing.Point(297, 270)
         Me.txtValjundTekst2.Name = "txtValjundTekst2"
         Me.txtValjundTekst2.ReadOnly = True
