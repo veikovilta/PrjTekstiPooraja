@@ -120,6 +120,7 @@ Partial Class formKasutajaAken
         '
         'btnStop
         '
+        Me.btnStop.Enabled = False
         Me.btnStop.Location = New System.Drawing.Point(401, 380)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(95, 33)
