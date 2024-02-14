@@ -10,11 +10,9 @@ Public Class formKasutajaAken
         Dim algoPooraja As PrjTekstiPooraja.ITeisendused
         algoPooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
 
-        Dim loppStr As String
-
         If cpAlgo.Checked Then
-            loppStr = algoPooraja.algoPooraTekst(txtSisendTekst.Text)
-            txtValjundTekst1.Text = loppStr
+            algoPooraja.strTekst = txtSisendTekst.Text
+            txtValjundTekst1.Text = algoPooraja.pooraTekst()
         Else
             pooraja.strTekst = txtSisendTekst.Text
             txtValjundTekst1.Text = pooraja.pooraTekst()
@@ -28,11 +26,9 @@ Public Class formKasutajaAken
         Dim algoPooraja As PrjTekstiPooraja.ITeisendused
         algoPooraja = New PrjTekstiPooraja.CAlgoritmilinePooraja
 
-        Dim loppStr As String
-
         If cpAlgo.Checked Then
-            loppStr = algoPooraja.algoPooraTekst(txtSisendTekst.Text)
-            txtValjundTekst2.Text = loppStr
+            algoPooraja.teisendaTekst(txtSisendTekst.Text)
+            txtValjundTekst2.Text = algoPooraja.strTekst
         Else
             pooraja.teisendaTekst(txtSisendTekst.Text)
             txtValjundTekst2.Text = pooraja.strTekst
