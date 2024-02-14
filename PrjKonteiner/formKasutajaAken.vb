@@ -76,4 +76,8 @@ Public Class formKasutajaAken
         lblVowels.Text = vowels
 
     End Sub
+
+    Private Sub formKasutajaAken_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

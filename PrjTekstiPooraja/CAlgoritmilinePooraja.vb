@@ -2,6 +2,8 @@
 
     Implements ITeisendused
 
+    Private strPooratavTekst As String
+
     Public Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
             Throw New NotImplementedException()
@@ -22,30 +24,29 @@
 
     Public Property strTekst As String Implements ITeisendused.strTekst
         Get
-            Throw New NotImplementedException()
+            Return strPooratavTekst
         End Get
-        Set(value As String)
-            Throw New NotImplementedException()
+        Set(ByVal value As String)
+            strPooratavTekst = value
         End Set
     End Property
 
     Public Sub teisendaTekst(ByRef strSisendTekst As String) Implements ITeisendused.teisendaTekst
-        Throw New NotImplementedException()
+
+        For i As Integer = strSisendTekst.Length - 1 To 0 Step -1
+            strPooratavTekst &= strSisendTekst(i)
+        Next
+
     End Sub
 
     Public Function pooraTekst() As String Implements ITeisendused.pooraTekst
-        Throw New NotImplementedException()
-    End Function
-
-    Public Function algoPooraTekst(algneStr As Object) As String Implements ITeisendused.algoPooraTekst
-
         Dim loppStr As String = ""
 
-        For i As Integer = algneStr.Length - 1 To 0 Step -1
-            loppStr &= algneStr(i)
+        For i As Integer = strPooratavTekst.Length - 1 To 0 Step -1
+            loppStr &= strPooratavTekst(i)
         Next
 
         Return loppStr
-
     End Function
+
 End Class

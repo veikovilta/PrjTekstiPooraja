@@ -39,11 +39,9 @@
         strPooratavTekst = StrReverse(strSisendTekst)
     End Sub
 
-    Public Function algoPooraTekst(algneStr As Object) As String Implements ITeisendused.algoPooraTekst
-        Throw New NotImplementedException()
-    End Function
+    Private Function pooraTekst() As String _
+        Implements ITeisendused.pooraTekst
 
-    Private Function pooraTekst() As String Implements ITeisendused.pooraTekst
         Return StrReverse(strPooratavTekst)
     End Function
 
